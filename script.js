@@ -13,3 +13,7 @@ function myFunction() {
     moreText.style.display = "inline";
   }
 }
+
+window.addEventListener("load", (event) => {
+  moreText.style.display = "none";
+});
