@@ -14,6 +14,9 @@ function myFunction() {
   }
 }
 
-window.addEventListener("load", (event) => {
-  moreText.style.display = "none";
-});
+const sect = document.querySelector('section');
+
+const para = document.createElement('p');
+para.textContent = '';
+
+
