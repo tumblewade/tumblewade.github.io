@@ -1,11 +1,11 @@
 
 
 #more {display: none;}
-.intro{
+#intro{
     text-align: center;
     margin: auto;
 }
-.winRates{
+#winRates{
     text-align: center;
     margin: auto;
 }
