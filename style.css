@@ -1,16 +1,11 @@
 
 
 #more {display: none;}
-#header1{
+.intro{
     text-align: center;
+    margin: auto;
 }
-
-#intro{
+.winRates{
     text-align: center;
-}
-#header2{
-    text-align: center;
-}
-#winRates{
-    text-align: center;
+    margin: auto;
 }
