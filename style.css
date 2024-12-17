@@ -1,3 +1,18 @@
 
 
 #more {display: none;}
+#header1{
+    text-align: center;
+}
+
+#intro{
+    max-width: 300px;
+    text-align: center;
+}
+#header2{
+    text-align: center;
+}
+#winRates{
+    max-width: 300px;
+    text-allign: center;
+}
