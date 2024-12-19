@@ -4,15 +4,21 @@
 #intro{
     text-align: center;
     margin: auto;
+    max-width: 600px;
 }
 #winRates{
     text-align: center;
     margin: auto;
+    max-width: 600px;
 }
 #contact{
     border: 2px solid black;
     margin: 5px;
     padding: 5px;
+    max-width: 600px;
+}
+#background{
+    max-width: 500px;
 }
 input:invalid {
     border-color: red;
