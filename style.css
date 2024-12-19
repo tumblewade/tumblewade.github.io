@@ -1,11 +1,24 @@
 
 
 #more {display: none;}
-.intro{
+#intro{
     text-align: center;
     margin: auto;
 }
-.winRates{
+#winRates{
     text-align: center;
     margin: auto;
+}
+#contact{
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+input:invalid {
+    border-color: red;
+    color:red;
+}
+input:valid {
+    border-color: green;
+    color: default;
 }
