@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -34,6 +36,10 @@
         have the higher win rates, but in higher rating groups, the more complex openings do.
       </p>
     </div>
+    <div id="rates">
+      <h4>Opening Move Statistics</h4>
+      
+    </div>
 
     <h3 id="header3">Background</h3>
     <p id="background">
@@ -52,8 +58,35 @@
         <button style="margin-top: 5px;" type="submit">Submit</button>
       </form>
     </div>
+    <div id="barPlot"></div>
+    <script>
+        Plotly.d3.csv('https://tumblewade.github.io/openingData.csv', function(err, rows) {
+            if (err) {
+                console.error('Error loading CSV:', err);
+                return;
+            }
 
+            console.log('Loaded data:', rows);
+
+            function unpack(rows, key) {
+                return rows.map(function(row) { return row[key]; });
+            }
+
+            var data = [{
+                type: 'bar',
+                x: unpack(rows, 'Opening Move'),
+                y: unpack(rows, '# of Games'),
+            }];
+
+            var layout = {
+                title: 'Games Played per Opening',
+            };
+
+            Plotly.newPlot('barPlot', data, layout);
+        });
+    </script>
 
     <script src="script.js"></script>
   </body>
 </html>
+
