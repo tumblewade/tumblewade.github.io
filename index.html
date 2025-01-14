@@ -38,7 +38,8 @@
     </div>
     <div id="rates">
       <h4>Opening Move Statistics</h4>
-      
+      <p>In the graph below, you'll notice that the majority of games use a few first moves. This is simply because these moves give white the biggest lead. The other, less used, moves aren't used as much because they don't give as big of leads.</p>
+      <div id="barPlot"></div>
     </div>
 
     <h3 id="header3">Background</h3>
@@ -58,33 +59,6 @@
         <button style="margin-top: 5px;" type="submit">Submit</button>
       </form>
     </div>
-    <div id="barPlot"></div>
-    <script>
-        Plotly.d3.csv('https://tumblewade.github.io/openingData.csv', function(err, rows) {
-            if (err) {
-                console.error('Error loading CSV:', err);
-                return;
-            }
-
-            console.log('Loaded data:', rows);
-
-            function unpack(rows, key) {
-                return rows.map(function(row) { return row[key]; });
-            }
-
-            var data = [{
-                type: 'bar',
-                x: unpack(rows, 'Opening Move'),
-                y: unpack(rows, '# of Games'),
-            }];
-
-            var layout = {
-                title: 'Games Played per Opening',
-            };
-
-            Plotly.newPlot('barPlot', data, layout);
-        });
-    </script>
 
     <script src="script.js"></script>
   </body>
