@@ -38,6 +38,31 @@ body{
     max-width: 600px;
 }
 
+.myNav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ 
+.myNav li {
+  float: left;
+}
+ 
+.myNav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ 
+/* Change the link color to #111 (black) on hover */
+.myNav li a:hover {
+  background-color: #111;
+}
+
 #background{
     max-width: 500px;
 }
